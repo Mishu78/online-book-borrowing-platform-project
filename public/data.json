@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "title": "The Alchemist",
+    "author": "Paulo Coelho",
+    "description": "A young shepherd travels in search of treasure and discovers his destiny.",
+    "category": "Story",
+    "available_quantity": 12,
+    "image_url": "https://i.ibb.co/k6S6YQ6t/alchemi.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Eloquent JavaScript",
+    "author": "Marijn Haverbeke",
+    "description": "A modern introduction to programming using JavaScript.",
+    "category": "Tech",
+    "available_quantity": 20,
+    "image_url": "https://i.ibb.co/4RMHGCZS/eloquent.jpg"
+  },
+  {
+    "id": 3,
+    "title": "A Brief History of Time",
+    "author": "Stephen Hawking",
+    "description": "An exploration of cosmology, black holes, and the nature of time.",
+    "category": "Science",
+    "available_quantity": 15,
+    "image_url": "https://i.ibb.co/HTt9cJm5/brief-history.jpg"
+  },
+  {
+    "id": 4,
+    "title": "The Girl with the Dragon Tattoo",
+    "author": "Stieg Larsson",
+    "description": "A gripping mystery involving secrets, crime, and investigation.",
+    "category": "Story",
+    "available_quantity": 8,
+    "image_url": "https://i.ibb.co/1Y2YvGjW/dragon.jpg"
+  },
+  {
+    "id": 5,
+    "title": "Clean Code",
+    "author": "Robert C. Martin",
+    "description": "A handbook of agile software craftsmanship and best coding practices.",
+    "category": "Tech",
+    "available_quantity": 18,
+    "image_url": "https://i.ibb.co/8D9bXGRm/clean-code.jpg"
+  },
+  {
+    "id": 6,
+    "title": "The Selfish Gene",
+    "author": "Richard Dawkins",
+    "description": "An introduction to evolutionary biology and gene-centered theory.",
+    "category": "Science",
+    "available_quantity": 10,
+    "image_url": "https://i.ibb.co/CKFqzyqT/selfish-gene.jpg"
+  },
+  {
+    "id": 7,
+    "title": "Harry Potter and the Sorcerer's Stone",
+    "author": "J.K. Rowling",
+    "description": "A young wizard begins his magical journey at Hogwarts.",
+    "category": "Story",
+    "available_quantity": 9,
+    "image_url": "https://i.ibb.co/zVfxcXqX/harry-potter.jpg"
+  },
+  {
+    "id": 8,
+    "title": "You Don’t Know JS",
+    "author": "Kyle Simpson",
+    "description": "A deep dive into the core mechanisms of JavaScript.",
+    "category": "Tech",
+    "available_quantity": 14,
+    "image_url": "https://i.ibb.co/HTJhJmcR/js.jpg"
+  },
+  {
+    "id": 9,
+    "title": "The Origin of Species",
+    "author": "Charles Darwin",
+    "description": "The foundation of evolutionary biology and natural selection theory.",
+    "category": "Science",
+    "available_quantity": 11,
+    "image_url": "https://i.ibb.co/n8wJD48v/origin-species.jpg"
+  },
+  {
+    "id": 10,
+    "title": "Treasure Island",
+    "author": "Robert Louis Stevenson",
+    "description": "A classic adventure of pirates and hidden treasure.",
+    "category": "Story",
+    "available_quantity": 7,
+    "image_url": "https://i.ibb.co/HT8NH6d0/treasure.jpg"
+  },
+  {
+    "id": 11,
+    "title": "Introduction to Algorithms",
+    "author": "Thomas H. Cormen",
+    "description": "A comprehensive guide to algorithms and data structures.",
+    "category": "Tech",
+    "available_quantity": 16,
+    "image_url": "https://i.ibb.co/8nfLZRm8/algorithms.jpg"
+  },
+  {
+    "id": 12,
+    "title": "The Elegant Universe",
+    "author": "Brian Greene",
+    "description": "A fascinating look at string theory and the fabric of the universe.",
+    "category": "Science",
+    "available_quantity": 13,
+    "image_url": "https://i.ibb.co/8Lhh1CRx/elegant.jpg"
+  }
+]
