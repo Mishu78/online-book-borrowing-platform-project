@@ -5,8 +5,8 @@ const TopBookBorrow = async () => {
     const res = await fetch('http://localhost:3000/data.json', {
   cache: 'no-store'
 })
-    const books = await res.json()
-    console.log(books)
+    const books = await res.json() 
+    
     const topBookBorrow = books.slice(0,4)
     return (
         <div>
