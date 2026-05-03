@@ -13,7 +13,7 @@ const BookDetailsPage = async ({ params }) => {
 
     return (
         <div className="max-w-6xl mx-auto p-6">
-
+            
             {/* Card */}
             <div className="bg-white shadow-lg rounded-xl p-6 grid md:grid-cols-2 gap-8">
 
