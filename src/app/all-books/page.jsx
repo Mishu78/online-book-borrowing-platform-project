@@ -10,7 +10,7 @@ const AllBookPage = () => {
 
   
   useEffect(() => {
-    fetch("/data.json")
+    fetch("https://online-book-borrowing-platform-proj.vercel.app/data.json")
       .then((res) => res.json())
       .then((data) => setBooks(data));
   }, []);

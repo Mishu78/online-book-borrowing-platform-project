@@ -2,7 +2,7 @@ import React from 'react';
 import TopBookSlider from './TopBookSlider';
 
 const TopBookBorrow = async () => {
-    const res = await fetch('http://localhost:3000/data.json', {
+    const res = await fetch('https://online-book-borrowing-platform-proj.vercel.app/data.json', {
         cache: 'no-store'
     });
     

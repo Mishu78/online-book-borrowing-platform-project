@@ -5,7 +5,7 @@ import BorrowButton from '@/components/BorrowButton'; // Adjust import path as n
 const BookDetailsPage = async ({ params }) => {
     const { id } = await params;
 
-    const res = await fetch('http://localhost:3000/data.json', {
+    const res = await fetch('https://online-book-borrowing-platform-proj.vercel.app/data.json', {
         cache: 'no-store'
     });
 
