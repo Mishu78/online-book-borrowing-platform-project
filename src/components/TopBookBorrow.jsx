@@ -1,18 +1,23 @@
 import React from 'react';
-import BookCard from './BookCard';
+import TopBookSlider from './TopBookSlider';
 
 const TopBookBorrow = async () => {
     const res = await fetch('http://localhost:3000/data.json', {
-  cache: 'no-store'
-})
-    const books = await res.json() 
+        cache: 'no-store'
+    });
     
-    const topBookBorrow = books.slice(0,4)
+    const books = await res.json(); 
+    const topBookBorrow = books.slice(0, 4);
+
     return (
-        <div>
-            <h1 className='text-2xl font-bold my-5'>Featured books</h1>
-            <div className='grid grid-cols-4 gap-5 '>
-{topBookBorrow.map((book) => <BookCard key={book.id} book={book}></BookCard> )}
+        <div className="my-12 px-4">
+            <div className="max-w-2xl mx-auto">
+                <h1 className="text-2xl md:text-3xl font-bold my-5 text-slate-800">
+                    Featured Books
+                </h1>
+                
+                {/* Fixed-width wrapper passes the correct sizing to Swiper */}
+                <TopBookSlider books={topBookBorrow} />
             </div>
         </div>
     );

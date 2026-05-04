@@ -12,7 +12,6 @@ const Navbar = () => {
   const user = session?.user;
   const [imgError, setImgError] = useState(false);
 
-  // Handles logging out the user safely
   const handleLogout = async () => {
     await authClient.signOut({
       fetchOptions: {
@@ -25,9 +24,9 @@ const Navbar = () => {
 
   return (
     <div className="border-b px-2 bg-white">
-      <nav className="flex justify-between items-center py-3 max-w-7xl mx-auto w-full">
+      <nav className="flex justify-between items-center py-3 max-w-7xl mx-auto w-full select-none">
         {/* Left: Website Logo */}
-        <div className="flex gap-2 items-center">
+        <Link href="/" className="flex gap-2 items-center cursor-pointer">
           <Image
             src={"/logo.jpg"}
             alt="logo"
@@ -37,21 +36,20 @@ const Navbar = () => {
             style={{ width: "auto", height: "auto" }}
             className="object-cover"
           />
-          <h3 className="font-black text-lg">Borrow&Connect</h3>
-        </div>
+        </Link>
 
         {/* Center: Navigation Links */}
         <ul className="flex items-center gap-5 text-sm">
           <li>
-            <Link href={"/"} className="hover:text-blue-600 transition">Home</Link>
+            <Link href={"/"} className="hover:text-blue-600 transition font-medium">Home</Link>
           </li>
           <li>
-            <Link href={"/all-books"} className="hover:text-blue-600 transition">All Books</Link>
+            <Link href={"/all-books"} className="hover:text-blue-600 transition font-medium">All Books</Link>
           </li>
-          {/* Show My Profile link only when logged in */}
+          {/* REQUIREMENT COMPLIANCE: Display link only if the user is logged in */}
           {user && (
             <li>
-              <Link href={"/profile"} className="hover:text-blue-600 transition">My Profile</Link>
+              <Link href={"/profile"} className="hover:text-blue-600 transition font-medium">My Profile</Link>
             </li>
           )}
         </ul>
@@ -72,25 +70,23 @@ const Navbar = () => {
                 ) : (
                   <FaUserCircle className="text-xl text-slate-500" />
                 )}
-                <span className="font-semibold">{user.name}</span>
+                <span className="font-bold text-slate-700">{user.name}</span>
               </div>
               <button
                 onClick={handleLogout}
-                className="btn btn-sm bg-red-600 hover:bg-red-700 text-white px-3 py-1.5 rounded-md text-xs transition font-medium"
+                className="bg-red-600 hover:bg-red-700 text-white px-3 py-1.5 rounded-md text-xs transition font-semibold shadow-sm"
               >
                 Logout
               </button>
             </div>
           ) : (
             // If logged out: Show Login button
-            <ul className="flex items-center text-sm">
-              <li className="flex items-center gap-2">
+            <div className="flex items-center text-sm">
+              <Link href={"/login"} className="flex items-center gap-2 font-bold text-blue-600 hover:text-blue-700 transition">
                 <FaUserCircle className="text-lg" /> 
-                <Link href={"/login"} className="font-medium hover:text-blue-600 transition">
-                  Login
-                </Link>
-              </li>
-            </ul>
+                <span>Login</span>
+              </Link>
+            </div>
           )}
         </div>
       </nav>

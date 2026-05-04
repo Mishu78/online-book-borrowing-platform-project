@@ -10,7 +10,7 @@ const ProfilePage = () => {
     const { data: session, isPending } = authClient.useSession();
     const user = session?.user;
 
-    // Private Route protection gate
+    // Direct access URL protection
     useEffect(() => {
         if (!isPending && !user) {
             router.push("/login");
@@ -19,8 +19,9 @@ const ProfilePage = () => {
 
     if (isPending) {
         return (
-            <div className="min-h-[70vh] flex justify-center items-center">
-                <p className="text-slate-500 font-medium animate-pulse">
+            <div className="min-h-[70vh] flex flex-col justify-center items-center gap-2">
+                <div className="w-8 h-8 border-4 border-blue-600 border-t-transparent rounded-full animate-spin" />
+                <p className="text-slate-500 font-medium text-sm animate-pulse">
                     Loading profile...
                 </p>
             </div>
@@ -39,10 +40,10 @@ const ProfilePage = () => {
                     {user.image ? (
                         <Image 
                             src={user.image} 
-                            alt={user.name || "User Profile"} 
+                            alt={user.name || "User"} 
                             fill 
                             className="object-cover"
-                            unoptimized // Add this if external domains aren't added to next.config.js yet
+                            unoptimized
                         />
                     ) : (
                         <FaUserCircle className="text-7xl text-slate-400" />
@@ -62,7 +63,7 @@ const ProfilePage = () => {
 
                 <hr className="w-full border-slate-100 my-2" />
 
-                {/* Action button leading to Update route */}
+                {/* Challenge 1: Take user to another route for updating */}
                 <button 
                     onClick={() => router.push("/profile/update")} 
                     className="w-full bg-slate-800 hover:bg-slate-900 text-white font-semibold py-3 rounded-xl transition duration-200 shadow-md"
