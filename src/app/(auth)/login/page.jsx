@@ -9,7 +9,7 @@ const LoginPage = () => {
     const router = useRouter();
     const { register, handleSubmit, formState: { errors } } = useForm();
 
-    // 1. Email and Password Login Logic
+    
     const handleLoginFunc = async (data) => {
         const { email, password } = data;
 
@@ -17,7 +17,7 @@ const LoginPage = () => {
             email: data.email,
             password: data.password,
             rememberMe: true,
-            callbackURL: "/", // Redirect directly to Home on successful login
+            callbackURL: "/",
         });
 
         if (error) {
@@ -30,7 +30,7 @@ const LoginPage = () => {
         }
     };
 
-    // 2. Google Social Login Logic
+
     const handleGoogleSignin = async () => {
       const data=  await authClient.signIn.social({
             provider: "google",
@@ -61,7 +61,7 @@ const LoginPage = () => {
                     </button>
                 </form>
 
-                {/* Social Login Section */}
+            
                 <div className="divider my-6 text-center text-slate-400 text-sm">OR</div>
                 
                 <button onClick={handleGoogleSignin} className="btn btn-outline w-full border border-slate-300 py-2 rounded-md flex items-center justify-center gap-2 hover:bg-slate-50">
