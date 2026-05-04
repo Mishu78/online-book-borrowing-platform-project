@@ -1,7 +1,9 @@
 import Banner from "@/components/Banner";
+import LibraryStats from "@/components/LibraryStats";
 import Navbar from "@/components/Navbar";
 import NewArrivalsPage from "@/components/NewArrivals";
 import TopBookBorrow from "@/components/TopBookBorrow";
+import WhyChoosePlatform from "@/components/WhyChoosePlatform";
 import Image from "next/image";
 
 export default function Home() {
@@ -12,6 +14,8 @@ export default function Home() {
         <NewArrivalsPage />
       </div>
      <TopBookBorrow/>
+     <WhyChoosePlatform />
+     <LibraryStats/>
     </div>
   );
 }
